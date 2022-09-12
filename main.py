@@ -1,5 +1,9 @@
 from colorama import Fore, init; init()
 import random,time
+import pyfiglet
+Tata = "BiteNumPhoneHack"
+ASCII_art_1 = pyfiglet.figlet_format(Tata)
+print(ASCII_art_1)
 
 x=0
 a = "AZERTYUIOPQSDFGHJKLMWXCVBNazertyuiopqsdfghjklmwxcvbn1234567890."
@@ -46,7 +50,7 @@ ip    = gen_ip()
 cc    = gen_cc()
 token = gen_token()
 
-print(f"{Fore.GREEN}qui trouvé numero phone ?:")
+print(f"{Fore.GREEN}qui trouvÃ© numero phone ?:")
 input()
 
 
