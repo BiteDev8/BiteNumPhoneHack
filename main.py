@@ -1,7 +1,7 @@
 from colorama import Fore, init; init()
 import random,time
 import pyfiglet
-Tata = "BiteNumPhoneHack"
+Tata = "BitePhoneHack"
 ASCII_art_1 = pyfiglet.figlet_format(Tata)
 print(ASCII_art_1)
 
