@@ -1,86 +1,67 @@
-from colorama import Fore, Back, Style, init
-import random
-import time
+from colorama import Fore, init; init()
+import random,time
 
-init()
+x=0
 a = "AZERTYUIOPQSDFGHJKLMWXCVBNazertyuiopqsdfghjklmwxcvbn1234567890."
-
+h = "1234567890"
 cookie= ''.join(random.choice(a)for i in range(111))
 
 def gen_ip():
-    h = "1234567890"
-    first = ''.join((random.choice(h)for i in range(2)))
+    first  = ''.join((random.choice(h)for i in range(2)))
     second = ''.join((random.choice(h)for i in range(2)))
-    third = ''.join((random.choice(h)for i in range(2)))
-    four = ''.join((random.choice(h)for i in range(2)))
-
-    ipres = first + "." + second + "." + third +"." + four
-
+    third  = ''.join((random.choice(h)for i in range(2)))
+    four   = ''.join((random.choice(h)for i in range(2)))
+    ipres  = first + "." + second + "." + third +"." + four
     return ipres
 
-ip = gen_ip()
-
 def gen_cc():
-    h = "1234567890"
-    first = ''.join((random.choice(h)for i in range(4)))
+    first  = ''.join((random.choice(h)for i in range(4)))
     second = ''.join((random.choice(h)for i in range(4)))
-    third = ''.join((random.choice(h)for i in range(4)))
-    four = ''.join((random.choice(h)for i in range(4)))
-
-    ccres = first + "." + second + "." + third +"." + four
-
+    third  = ''.join((random.choice(h)for i in range(4)))
+    four   = ''.join((random.choice(h)for i in range(4)))
+    ccres  = first + "." + second + "." + third +"." + four
     return ccres
 
-cc = gen_cc()
-
 def gen_token():
-    a = "AZERTYUIOPQSDFGHJKLMWXCVBNazertyuiopqsdfghjklmwxcvbn1234567890"
-    first = ''.join((random.choice(a)for i in range(24)))
+    first  = ''.join((random.choice(a)for i in range(24)))
     second = ''.join((random.choice(a)for i in range(6)))
-    third = ''.join((random.choice(a)for i in range(27)))
+    third  = ''.join((random.choice(a)for i in range(27)))
 
     result = first + "." + second + "." + third
 
     return result
 
+def gen_num():
+	bite   = "76"
+	debut  = ''.join((random.choice(bite)for i in range(1)))
+	first  = ''.join((random.choice(h)for i in range(2)))
+	two    = ''.join((random.choice(h)for i in range(2)))
+	tri    = ''.join((random.choice(h)for i in range(2)))
+	four   = ''.join((random.choice(h)for i in range(2)))
+	result = debut + " " + first + " " + two + " " + tri + " " + four
+
+	return result
+
+ip    = gen_ip()
+cc    = gen_cc()
 token = gen_token()
 
-
-x=0
-
-print(Fore.GREEN+"qui trouvé numero phone ?:")
+print(f"{Fore.GREEN}qui trouvé numero phone ?:")
 input()
 
 
 while x <= 3000 :
-	def gen_num():
-	    a = "123456789"
-	    bite = "76"
-	    debut = ''.join((random.choice(bite)for i in range(1)))
-
-	    first = ''.join((random.choice(a)for i in range(2)))
-	    two = ''.join((random.choice(a)for i in range(2)))
-	    tri = ''.join((random.choice(a)for i in range(2)))
-	    four = ''.join((random.choice(a)for i in range(2)))
-	
-
-	    result = debut + " " + first + " " + two + " " + tri + " " + four
-
-	    return result
-
 	num = gen_num()
-	print(Fore.RED+"0"+num)
+	print(f"{Fore.RED}0{num}")
 	x+=1
 
 
-pop="0"+num
-print(pop ,Fore.GREEN+"<== True") 
+print(f"0{num} {Fore.GREEN}<== True") 
 
-print(Fore.WHITE+"Do we hack :",pop," ? y/n")
+print(f"{Fore.WHITE}Do we hack : 0{num} ? y/n")
 lol=str(input())
 
-if lol == "y" :
-	
+if lol == "y":
 	print("hack en cours...")
 	time.sleep(3)
 	print("tokens hack...")
@@ -88,15 +69,11 @@ if lol == "y" :
 	print("initialisation...")
 	time.sleep(2)
 
-	print(Fore.GREEN+"")
-	print("Token :",token)
-	print("ip :",ip)
-	print("cookie roblox :",cookie )
-	print("credit cart :",cc ," date :08/24  cap :652" )
+	print(f"{Fore.GREEN}Token : {token}")
+	print(f"IP : {ip}")
+	print(f"Cookie roblox : {cookie}")
+	print(f"Credit Cart : {cc} Data : {random.randint(1,12)}/{random.randint(23,25)}  CAP : {random.randint(100,999)}" )
 else :
 	pass
 	
-
-
-
 input()
